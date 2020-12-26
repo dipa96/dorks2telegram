@@ -1,7 +1,7 @@
 #!/bin/bash 
 : '
 @name   dorks-github_clusterbomb
-@author Donato "guacam0le" Di Pasquale
+@author dipa996
 @link   https://github.com/dipa96/dorks2telegram
 '
 
@@ -22,7 +22,7 @@ else
     cp "$DORKS"/$domain "$DORKS"/dorks.old
 fi
 #change this path with your path
-python3 "$HOME"/tools/GitDorker/GitDorker.py -tf "$HOME"/1.scripts/dorks2telegram/GitDorker/token.txt -q $domain -d "$HOME"/1.scripts/dorks2telegram/GitDorker/Dorks/alldorks.txt -o "$DORKS"/$domain
+python3 "$HOME"/tools/GitDorker/GitDorker.py -tf /path/to/token.txt -q $domain -d /path/to/alldorks.txt -o "$DORKS"/$domain
 sort -u "$DORKS"/$domain | grep ",[1-9]" > "$DORKS"/new_sorted.txt
 sort -u "$DORKS"/dorks.old | grep ",[1-9]" > "$DORKS"/old_sorted.txt
 old_length_dorks=$(cat "$DORKS"/old_sorted.txt | grep ",[1-9]" | wc -l)
