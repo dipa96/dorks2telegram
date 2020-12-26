@@ -7,7 +7,7 @@
 
 
 domain="$1"
-RESULTDIR="$HOME/1.scripts/dorks2telegram/telegram_db/$domain" #change this path with your path
+RESULTDIR="$HOME"/dorks2telegram/telegram_db/$domain" #change this path with your path
 DORKS="$RESULTDIR/dorks"
 
 checkDir() {
